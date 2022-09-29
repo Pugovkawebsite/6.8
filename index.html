@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="menu">
+            <div class="elem">
+                <div class="elem-wraper">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+            </div>
+            <div class="menu__wrapper">
+                <div class="item">
+                    <div class="item__box">
+                        <svg class="item_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5 22C3.34315 22 2 20.6568 2 19V11.3361C2 10.4856 2.36096 9.67512 2.99311 9.10619L9.9931 2.80619C11.134 1.77937 12.866 1.77937 14.0069 2.80619L21.0069 9.10619C21.639 9.67512 22 10.4856 22 11.3361V19C22 20.6568 20.6569 22 19 22H5ZM20.5 11.3361V19C20.5 19.8284 19.8284 20.5 19 20.5H16V15C16 13.3431 14.6569 12 13 12H11C9.34315 12 8 13.3431 8 15V20.5H5C4.17157 20.5 3.5 19.8284 3.5 19V11.3361C3.5 10.9108 3.68048 10.5056 3.99655 10.2211L10.9966 3.92113C11.567 3.40772 12.433 3.40772 13.0034 3.92113L20.0034 10.2211C20.3195 10.5056 20.5 10.9108 20.5 11.3361ZM9.5 20.5V15C9.5 14.1716 10.1716 13.5 11 13.5H13C13.8284 13.5 14.5 14.1716 14.5 15V20.5H9.5Z" fill=""/>
+                        </svg>
+                        <!-- <img src="icons/menu/dashboard.svg" alt="dashboard" class="item_icon"> -->
+                    </div>
+                    <div class="item_descr">Dashboard</div>
+                </div>
+
+                <div class="item">
+                    <div class="item__box">
+                        
+                        <svg class="item_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.25C7.41421 2.25 7.75 2.58579 7.75 3V4H16.25V3C16.25 2.58579 16.5858 2.25 17 2.25C17.4142 2.25 17.75 2.58579 17.75 3V4H19C20.6569 4 22 5.34315 22 7V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V7C2 5.34315 3.34315 4 5 4H6.25V3C6.25 2.58579 6.58579 2.25 7 2.25ZM16.25 5.5V7C16.25 7.41421 16.5858 7.75 17 7.75C17.4142 7.75 17.75 7.41421 17.75 7V5.5H19C19.8284 5.5 20.5 6.17157 20.5 7V10.25H3.5V7C3.5 6.17157 4.17157 5.5 5 5.5H6.25V7C6.25 7.41421 6.58579 7.75 7 7.75C7.41421 7.75 7.75 7.41421 7.75 7V5.5H16.25ZM3.5 11.75V19C3.5 19.8284 4.17157 20.5 5 20.5H19C19.8284 20.5 20.5 19.8284 20.5 19V11.75H3.5Z" fill=""/>
+                        </svg>
+                    </div>
+                    <div class="item_descr">Upcoming</div>
+                </div>
+
+                <div class="item">
+                    <div class="item__box">
+                        <!-- <img src="icons/menu/explore.svg" alt="explore" class="item_icon"> -->
+                        <svg class="item_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20.5C16.6944 20.5 20.5 16.6944 20.5 12C20.5 7.30558 16.6944 3.5 12 3.5C7.30558 3.5 3.5 7.30558 3.5 12C3.5 16.6944 7.30558 20.5 12 20.5ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill=""/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9368 9.06319L10.8779 10.5853C10.7427 10.636 10.636 10.7427 10.5853 10.8779L9.06319 14.9368L13.1221 13.4147C13.2573 13.364 13.364 13.2573 13.4147 13.1221L14.9368 9.06319ZM15.4401 7.27246L10.3512 9.18079C9.81036 9.38361 9.38361 9.81035 9.18079 10.3512L7.27246 15.4401C6.97101 16.244 7.75603 17.029 8.55992 16.7275L13.6488 14.8192C14.1896 14.6164 14.6164 14.1896 14.8192 13.6488L16.7275 8.55992C17.029 7.75603 16.244 6.97101 15.4401 7.27246Z" fill=""/>
+                        </svg>
+                    </div>
+                    <div class="item_descr">Explore</div>
+                </div>
+
+                <div class="item">
+                    <div class="item__box">
+                        <!-- <img src="icons/menu/profile.svg" alt="profile" class="item_icon"> -->
+                        <svg class="item_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.5C13.933 10.5 15.5 8.933 15.5 7C15.5 5.067 13.933 3.5 12 3.5C10.067 3.5 8.5 5.067 8.5 7C8.5 8.933 10.067 10.5 12 10.5ZM12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill=""/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 15.75C6.65279 15.75 4.75 17.6528 4.75 20V21C4.75 21.4142 4.41421 21.75 4 21.75C3.58579 21.75 3.25 21.4142 3.25 21V20C3.25 16.8244 5.82436 14.25 9 14.25H15C18.1756 14.25 20.75 16.8244 20.75 20V21C20.75 21.4142 20.4142 21.75 20 21.75C19.5858 21.75 19.25 21.4142 19.25 21V20C19.25 17.6528 17.3472 15.75 15 15.75H9Z" fill=""/>
+                        </svg>
+                    </div>
+                    <div class="item_descr">Profile</div>
+                </div>
+
+                <div class="item">
+                    <div class="item__box">
+                        <!-- <img src="icons/menu/settings.svg" alt="settings" class="item_icon"> -->
+                        <svg class="item_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 14.5C13.3807 14.5 14.5 13.3807 14.5 12C14.5 10.6193 13.3807 9.5 12 9.5C10.6193 9.5 9.5 10.6193 9.5 12C9.5 13.3807 10.6193 14.5 12 14.5ZM16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" fill=""/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9047 2.84189L10.5172 4.00455C10.1904 4.9849 9.47329 5.67937 8.72212 6.09762C8.65807 6.13329 8.59465 6.16997 8.53188 6.20765C7.79322 6.65109 6.83191 6.92568 5.81829 6.71826L4.61651 6.47233C4.40566 6.42918 4.19086 6.5258 4.08326 6.71218L3.46227 7.78775C3.35467 7.97413 3.3784 8.20846 3.52119 8.36949L4.33621 9.2886C5.02026 10.06 5.26522 11.0268 5.25157 11.8882C5.25039 11.9627 5.25039 12.0373 5.25157 12.1118C5.26521 12.9732 5.02025 13.9399 4.33621 14.7113L3.52119 15.6304C3.3784 15.7915 3.35467 16.0258 3.46228 16.2122L4.08326 17.2878C4.19086 17.4741 4.40566 17.5707 4.61651 17.5276L5.8182 17.2817C6.83184 17.0743 7.79316 17.3489 8.53183 17.7923C8.59461 17.83 8.65805 17.8667 8.72212 17.9024C9.47329 18.3206 10.1904 19.0151 10.5172 19.9955L10.9047 21.1581C10.9728 21.3623 11.1638 21.5 11.3791 21.5H12.621C12.8362 21.5 13.0273 21.3623 13.0954 21.1581L13.4829 19.9955C13.8097 19.0151 14.5268 18.3206 15.2779 17.9024C15.342 17.8667 15.4054 17.83 15.4682 17.7923C16.2069 17.3489 17.1682 17.0743 18.1819 17.2817L19.3835 17.5276C19.5944 17.5707 19.8092 17.4741 19.9168 17.2878L20.5377 16.2122C20.6453 16.0258 20.6216 15.7915 20.4788 15.6304L19.6639 14.7114C18.9798 13.94 18.7348 12.9732 18.7485 12.1118C18.7497 12.0373 18.7497 11.9627 18.7485 11.8882C18.7348 11.0267 18.9798 10.06 19.6639 9.28855L20.4788 8.36949C20.6216 8.20846 20.6453 7.97414 20.5377 7.78775L19.9168 6.71218C19.8092 6.5258 19.5944 6.42919 19.3835 6.47233L18.1818 6.71825C17.1682 6.92567 16.2068 6.65108 15.4682 6.20765C15.4054 6.16997 15.342 6.13329 15.2779 6.09762C14.5268 5.67937 13.8097 4.9849 13.4829 4.00455L13.0954 2.84189C13.0273 2.63771 12.8362 2.5 12.621 2.5H11.3791C11.1638 2.5 10.9728 2.63771 10.9047 2.84189ZM9.09413 3.53021C8.91189 4.07694 8.49591 4.50673 7.9924 4.78709C7.91408 4.83069 7.83655 4.87554 7.75983 4.9216C7.26514 5.21857 6.68428 5.36439 6.11901 5.24871L4.91723 5.00278C4.07385 4.8302 3.21465 5.21665 2.78422 5.96218L2.16324 7.03775C1.73281 7.78328 1.82773 8.72059 2.39888 9.36469L3.21391 10.2838C3.59582 10.7145 3.76088 11.2889 3.75176 11.8644C3.75033 11.9548 3.75033 12.0452 3.75176 12.1355C3.76087 12.7111 3.59582 13.2854 3.21391 13.7161L2.39888 14.6352C1.82773 15.2793 1.73281 16.2167 2.16324 16.9622L2.78422 18.0378C3.21465 18.7833 4.07385 19.1697 4.91723 18.9971L6.11892 18.7512C6.68421 18.6356 7.26507 18.7814 7.75977 19.0784C7.83651 19.1244 7.91406 19.1693 7.9924 19.2129C8.49591 19.4933 8.91189 19.9231 9.09413 20.4698L9.48169 21.6325C9.75391 22.4491 10.5182 23 11.3791 23H12.621C13.4819 23 14.2462 22.4491 14.5184 21.6325L14.9059 20.4698C15.0882 19.9231 15.5042 19.4933 16.0077 19.2129C16.086 19.1693 16.1635 19.1244 16.2403 19.0784C16.735 18.7814 17.3158 18.6356 17.8811 18.7512L19.0828 18.9971C19.9262 19.1697 20.7854 18.7833 21.2158 18.0378L21.8368 16.9622C22.2672 16.2167 22.1723 15.2793 21.6011 14.6352L20.7862 13.7162C20.4042 13.2855 20.2392 12.7111 20.2483 12.1356C20.2497 12.0452 20.2497 11.9548 20.2483 11.8644C20.2392 11.2888 20.4042 10.7144 20.7862 10.2838L21.6011 9.36469C22.1723 8.72059 22.2672 7.78328 21.8368 7.03775L21.2158 5.96218C20.7854 5.21666 19.9262 4.8302 19.0828 5.00279L17.881 5.2487C17.3158 5.36438 16.7349 5.21857 16.2402 4.92159C16.1635 4.87554 16.086 4.83069 16.0077 4.78709C15.5042 4.50673 15.0882 4.07694 14.9059 3.53021L14.5184 2.36754C14.2462 1.55086 13.4819 1 12.621 1H11.3791C10.5182 1 9.75391 1.55086 9.48168 2.36754L9.09413 3.53021Z" fill=""/>
+                        </svg>
+                            
+                    </div>
+                    <div class="item_descr">Settings</div>
+                </div>
+            </div>
+            <div class="item menu__item">
+                <div class="item__box">
+                    <svg class="item_icon" width="26" height="29" viewBox="0 0 26 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_dd_1_1459)">
+                        <path d="M16.7331 4.67337C16.928 4.29095 17.3981 4.13609 17.7623 4.36319C19.2476 5.28939 20.4358 6.63223 21.1733 8.23205C22.0196 10.0679 22.2233 12.1353 21.7513 14.101C21.2794 16.0667 20.1594 17.8163 18.5719 19.0678C16.9843 20.3194 15.0216 21 13 21C10.9784 21 9.01575 20.3194 7.42817 19.0679C5.8406 17.8163 4.72061 16.0667 4.24868 14.101C3.77675 12.1353 3.98036 10.0679 4.82671 8.23207C5.56423 6.63225 6.7524 5.2894 8.2377 4.3632C8.60189 4.1361 9.07203 4.29096 9.26689 4.67338C9.46174 5.0558 9.30694 5.52046 8.9469 5.75409C7.77094 6.51718 6.82951 7.60015 6.23822 8.88278C5.53803 10.4016 5.36958 12.1119 5.76001 13.7382C6.15044 15.3644 7.07701 16.8119 8.39041 17.8473C9.70382 18.8827 11.3276 19.4457 13 19.4457C14.6725 19.4457 16.2962 18.8826 17.6096 17.8472C18.923 16.8118 19.8496 15.3644 20.24 13.7382C20.6304 12.1119 20.462 10.4016 19.7618 8.88277C19.1705 7.60014 18.2291 6.51717 17.0531 5.75408C16.6931 5.52045 16.5383 5.05579 16.7331 4.67337Z" fill=""/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13 2.25C13.4142 2.25 13.75 2.58579 13.75 3V8C13.75 8.41421 13.4142 8.75 13 8.75C12.5858 8.75 12.25 8.41421 12.25 8V3C12.25 2.58579 12.5858 2.25 13 2.25Z" fill=""/>
+                        </g>
+                        <defs>
+                        <filter id="filter0_dd_1_1459" x="-3" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1459"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                        <feBlend mode="normal" in2="effect1_dropShadow_1_1459" result="effect2_dropShadow_1_1459"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1_1459" result="shape"/>
+                        </filter>
+                        </defs>
+                        </svg>
+                    
+                </div>
+                <div class="item_descr">Logout</div>
+            </div>
+        </div>
+        <div class="content">
+           <div class="search-menu">
+                <div class="search-menu__text">Shikra.</div>
+                <form action="#" class="search-menu__form">
+                    <div class="search-menu__input-wraper"> 
+                        <input type="text" placeholder="Search" class="search-menu__input">
+                    </div>
+                    
+                    <button class="search-menu__button">
+                        <div class="search-menu__wrap-small">
+                            <img src="icons/form/right.svg" alt="elem" class="search-menu__img">
+                            <img src="icons/form/left.svg" alt="elem" class="search-menu__img">
+                        </div>
+                        
+                    </button>
+                </form>
+
+           </div>
+           <div class="slider-content">
+                <div class="slider-content__header">
+                    
+                </div> 
+                <div class="slider-content__wrap">
+                    <div class="slider-content__tab-wrap">
+                        <div class="slider-content__elem">
+                            <!-- <img src="icons/tab/form.svg" alt="form" class="slider-content__form"> -->
+                            <span>Europe</span>
+                            </div>
+                        <div class="slider-content__elem slider-content__elem__active">
+                             <!-- <img src="icons/tab/form.svg" alt="form" class="slider-content__form"> -->
+                            <span>Sights</span>
+                            </div>
+                        <div class="slider-content__elem">
+                             <!-- <img src="icons/tab/form.svg" alt="form" class="slider-content__form"> -->
+                            <span>America</span>
+                            </div>
+                    </div>
+                    <div class="slider-content__tab-content">
+                        <div class="slider">
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/1.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Phi Phi Islands</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Thailand</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/2.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Europe</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Maldives</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            
+                            </div>
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/3.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Greecevillage</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Maldives</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/4.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Kudahuvadhoo Island</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Maldives</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-content__tab-content content__active">
+                        <div class="slider">
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/1.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Phi Phi Islands</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Thailand</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/2.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Kudahuvadhoo Island</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Maldives</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            
+                            </div>
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/3.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Greecevillage</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Maldives</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/4.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Kudahuvadhoo Island</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Maldives</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-content__tab-content">
+                        <div class="slider">
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/1.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">America</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Thailand</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/2.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Kudahuvadhoo Island</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Maldives</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            
+                            </div>
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/3.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Greecevillage</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Maldives</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="slider-elem">
+                                <img class="slider__img__main" src="img/slider/4.jpg" alt="slider">
+                                <div class="slider__information">
+                                    <div class="slider__location-place">Kudahuvadhoo Island</div>
+                                    <div class="slider__information-wrapper">
+                                        <span> 
+                                            <img src="icons/slider/location.svg" alt="location">
+                                            <div class="slider__location-name">Maldives</div>
+                                        </span>
+                                        <div class="slider__price">$1,480</div>
+                                    </div>
+                                </div>
+                                <div class="slider__circle-big">
+                                        <div class="slider__circle-small">
+                                        <img class="slider__circle-flag" src="icons/slider/flag.svg" alt="flag">
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+           </div>
+           <div class="content-wrap">
+            <div class="friends">
+                <div class="friends__wrap">
+                    <div class="friends__title">
+                        <img src="icons/friends/person.svg" alt="" class="friends__icon">
+                        <div class="friends__text">Invite Friends</div>
+                    </div>
+                    <div class="friends__button">
+                        <div class="friends__round"></div>
+                        <div class="friends__round"></div>
+                        <div class="friends__round"></div>
+                    </div>
+                </div>
+                <div class="friends__wr">
+                    <div class="friends__card-row">
+                        
+                        <button class="person person__bg-1">
+                            <div class="person__border">
+                                <img src="icons/friends/1.svg" alt="foto" class="person__foto">
+                            </div>
+                            <div class="person__name">Nate</div>
+                            <div class="person__circle person__circle__bg-1">
+                                <img src="icons/friends/close__transform.svg" alt="icon" class="person__icon">
+                            </div>
+                        </button>
+                        <button class="person person__bg-2">
+                            <div class="person__border">
+                                <img src="icons/friends/2.svg" alt="foto" class="person__foto">
+                            </div>
+                            <div class="person__name">Jim</div>
+                             <div class="person__circle person__circle__bg-2">
+                                <img src="icons/friends/close__transform.svg" alt="icon" class="person__icon">
+                            </div>
+                        </button>
+                        <button class="person person__bg-3">
+                            <div class="person__border">
+                                <img src="icons/friends/3.svg" alt="foto" class="person__foto">
+                            </div>
+                            <div class="person__name">Angela</div>
+                             <div class="person__circle person__circle__bg-3">
+                                <img src="icons/friends/yes.svg" alt="icon" class="person__icon">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="friends__card-row">
+                        <button class="person person__bg-4">
+                            <div class="person__border">
+                                <img src="icons/friends/4.svg" alt="foto" class="person__foto">
+                            </div>
+                            <div class="person__name">Bhaaji</div>
+                             <div class="person__circle person__circle__bg-4">
+                                <img src="icons/friends/close.svg" alt="icon" class="person__icon">
+                            </div>
+                        </button>
+                        <button class="person person__bg-5">
+                            <div class="person__border">
+                                <img src="icons/friends/5.svg" alt="foto" class="person__foto">
+                            </div>
+                            <div class="person__name">Billo</div>
+                             <div class="person__circle person__circle__bg-5">
+                                <img src="icons/friends/close.svg" alt="icon" class="person__icon">
+                            </div>
+                        </button>
+                        <button class="person person__bg-6">
+                            <div class="person__border">
+                                <img src="icons/friends/6.svg" alt="foto" class="person__foto">
+                            </div>
+                            <div class="person__name">Alex</div>
+                            <div class="person__circle person__circle__bg-6">
+                                <img src="icons/friends/close.svg" alt="icon" class="person__icon">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="content-wrap__person">
+                <div class="content-wrap__members">
+                    <div class="content-wrap__members__title">
+                        <img src="icons/members/fire.svg" alt="fire" class="content-wrap__members__img">
+                        <div class="content-wrap__members__text">Members</div>
+                    </div>
+                    <div class="friends__button">
+                        <div class="friends__round"></div>
+                        <div class="friends__round"></div>
+                        <div class="friends__round"></div>
+                    </div>
+                </div>
+                <div class="diagram diagram__position">
+                    <canvas id="myChart" width="477" height="290"></canvas>
+                </div>
+                
+            </div>
+           </div>
+        </div>
+        <div class="column">
+            <div class="information">
+                <!-- <img src="img/content/main.jpg" alt="foto" class="information__img"> -->
+                <div class="information__slider">
+                    <div class="single-item">
+                        <div><img class="information__slider__foto" src="img/content/main.jpg" alt="foto" ></div>
+                        <div><img class="information__slider__foto" src="img/content/main.jpg" alt="foto" ></div>
+                        <!-- <div>your content</div> -->
+                      </div>
+                </div>
+               
+                <div class="information__title">
+                    <span>
+                        25 Lakeland Terrace, Westland, <br> Michigan, USA
+                    </span>
+                    
+                </div>
+                <div class="information__icon-wr">
+                    <div class="information__text">
+                        <span>Apartment</span>
+                        <span>|</span>
+                        <span>by Robbin Johnson</span>
+    
+                    </div>
+                    <img src="icons/card/heart.svg" alt="heart" class="information__heart">
+                </div>
+
+                <div class="information__social">
+                    <div class="information__icon">
+                        
+                            <a class="round-small" href="#">
+                                <img src="icons/card/icon_1.svg" alt="icon" class="information__icon__elem">
+                            </a>
+                            
+                        <a class="round-small" href="#">
+                            <img src="icons/card/icon_2.svg" alt="icon" class="information__icon__elem">
+                        </a>
+                        <a class="round-small" href="#">
+                            <img src="icons/card/icon_3.svg" alt="icon" class="information__icon__elem">
+                        </a>
+                        
+                        
+                        
+                        
+                    </div>
+                    <div class="information__price">
+                        $ 2,900.00
+                    </div>
+                </div>
+                <div class="information__property">
+                    <div class="information__property__text information__property__width-130">
+                        <img src="icons/card/bilding.svg" alt="building" class="information__property__img">
+                        <span>Used property</span>
+                        
+                    </div>
+                    <div class="information__property__text information__property__width-20">                        
+                        <img src="icons/card/bed.svg" alt="building" class="information__property__img">
+                        <span>4</span>
+                    </div>
+                    <div class="information__property__text information__property__width-76">                        
+                        <img src="icons/card/elem.svg" alt="building" class="information__property__img">
+                        <span>170 m2</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="information__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14132.939007118639!2d-83.40919113677398!3d42.31566233555937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b4d9bcb140737%3A0xf9cd0cbb14e1fe10!2z0JzQuNGH0LjQs9Cw0L0g0KXQsNC80LDQvSDQodC-0YHQsNC50LXRgtC4!5e0!3m2!1sru!2sru!4v1661703862697!5m2!1sru!2sru" width="362" height="122" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="photos">
+                <div class="photos_title">
+                    <div class="photos__text">
+                        Photos
+                    </div>
+                    <div class="friends__button">
+                        <div class="friends__round"></div>
+                        <div class="friends__round"></div>
+                        <div class="friends__round"></div>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a data-fancybox="gallery" href="img/design/1_big.jpg">
+                        <img class="gallery__img" src="img/design/1.jpg" alt="1">
+                    </a>
+                    <a data-fancybox="gallery" href="img/design/2_big.jpg">
+                        <img class="gallery__img" src="img/design/2.jpg" alt="2">
+                    </a>
+                    <a data-fancybox="gallery" href="img/design/3_big.jpg">
+                        <img class="gallery__img" src="img/design/3.jpg" alt="3">
+                    </a>
+                    <a data-fancybox="gallery" href="img/design/4_big.jpg">
+                        <img class="gallery__img" src="img/design/4.jpg" alt="4">
+                    </a>
+                    <a data-fancybox="gallery" href="img/design/5_big.jpg">
+                        <img class="gallery__img" src="img/design/5.jpg" alt="5">
+                    </a>
+                    <a data-fancybox="gallery" href="img/design/6_big.jpg">
+                        <img class="gallery__img" src="img/design/6.jpg" alt="6">
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/carousel.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.31/dist/fancybox.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
